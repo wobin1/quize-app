@@ -58,3 +58,15 @@
 }
 
 
+p {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 1rem;
+}
+
+
+

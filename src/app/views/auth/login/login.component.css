@@ -7,9 +7,26 @@
 }
 
 .card {
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .example-container {
   margin-top: 1rem;
+}
+
+.intro {
+    margin-bottom: 1rem;
+}
+
+
+.page-title {
+    margin-bottom: 2rem;
+    color: #134E6F;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-right: 1rem;
 }

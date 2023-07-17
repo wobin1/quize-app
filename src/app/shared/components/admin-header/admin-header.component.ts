@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-admin-header',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-header.component.css']
 })
 export class AdminHeaderComponent {
+    @Output() btnClick= new EventEmitter
+    show_toggle:boolean=true;
 
+
+    onClick(){
+      console.log("second toggle working")
+      this.btnClick.emit()
+      this.show_toggle=false;
+    }
 }

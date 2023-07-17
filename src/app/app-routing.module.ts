@@ -6,9 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { QuizeComponent } from './shared/layout/quize/quize.component';
 import { QuizePageComponent } from './views/quize-page/quize-page/quize-page.component';
 import { AdminComponent } from './shared/layout/admin/admin.component';
+import { SubmitComponent } from './views/submit/submit.component';
 
 
 const routes:Routes = [
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+
+    {path:'submit', component: SubmitComponent},
     {path:'', loadChildren: () => import('./views/quize-page/quize-page.module').then(m => m.QuizePageModule)},
     {path:'', component: AdminComponent, children: [
       {path:'', loadChildren: () => import('./views/admin/admin.module').then(m => m.AdminModule)},

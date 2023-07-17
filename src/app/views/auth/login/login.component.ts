@@ -22,8 +22,19 @@ export class LoginComponent {
   response:any;
   progress:boolean= false;
 
-  getErrorMessage() {
+  ngOnInit(){
     
+      this.checkUser()
+
+    }
+
+    checkUser(){
+      let userId = this.store.getStoredData("nagodeTestUserId")
+    if(userId!=null){
+      window.location.href = '/quize';
+      console.log('user already on this pc')
+    }
+
   }
 
   

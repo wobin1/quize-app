@@ -7,3 +7,12 @@ mat-card {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
+
+.logo-toggle {
+    padding-left: 2rem;
+}
+
+img{
+    width: 90px;
+    height: 40px;
+}

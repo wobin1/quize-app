@@ -1,11 +1,11 @@
 
 <div class="section-layout">
     <div class="section" fxLayout="column" fxFlex="97%" fxLayoutAlign="center">
-        <app-admin-header></app-admin-header>
+        <app-admin-header (btnClick)="toggle()"></app-admin-header>
         <mat-sidenav-container class="example-container">
-            <mat-sidenav mode="side" opened>
+            <mat-sidenav mode="side" opened *ngIf="sidenav_toggle">
                 <div class="menu">
-                    <nav>
+                    <nav (click)="route('admin')">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-question" viewBox="0 0 16 16">
                                 <path d="M8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z"/>
@@ -17,7 +17,7 @@
                         Questions
                     </nav>
 
-                    <nav>
+                    <nav (click)="route('score')">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-file-earmark-bar-graph" viewBox="0 0 16 16">
                                 <path d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v6zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1z"/>

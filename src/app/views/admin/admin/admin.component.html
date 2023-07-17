@@ -1,61 +1,51 @@
-<div class="questions">
-    <app-question-card
-    question="Acetone is mainly used in which of the industries" 
-                        optionA="Construction, Paints, IAP, and Polymers"
-                        optionB="Construction, Paint, Polymers, and Agriculture"
-                        optionC="Oilfield, Cosmetics, Textile, and Paint"
-                        optionD="Cosmetics, Paints, Textile and Polymers"
-                        question_number="1"
-                        is_admin="true"
-                        answer="A"
-    ></app-question-card>
+<div class="questions" *ngFor="let row of questions">
+    <mat-card >
+        <mat-card-header>
+          <mat-card-title>Question</mat-card-title>
+          
+        </mat-card-header>
+    
+        <mat-card-content>
+            <div class="question" fxLayout="row" fxLayoutAlign="space-between">
+                {{row.question}}
+                <span class="answer" >Answer: &nbsp; <span>{{row.correctAnswer}}</span></span>
+            </div>
+    
+            <div class="options">
+                <div class="option" id="selected"> 
+                    <div>
+                        <span>A</span> &nbsp; {{row.options[0]}}
+                    </div>
+                    
+                </div>
+              
+                <div class="option" id="selected"> 
+                    <div><span>B</span> &nbsp; {{row.options[1]}}</div>
+                   
+                </div>
+                
+                <div class="option" id="selected" > 
+                    <div>
+                        <span>C</span> &nbsp; {{row.options[2]}}
+                    </div>
+                    
+                </div>
+               
+                <div class="option" id="selected"> 
+                   <div>
+                    <span>D</span> &nbsp; {{row.options[3]}}
+                    </div>               
+    
+                </div>
+               
+                   
+            </div>
+        </mat-card-content>
+    
+
+      </mat-card>
 
 
 </div>
 
-<div class="questions">
-    <app-question-card
-    question="Acetone is mainly used in which of the industries" 
-                        optionA="Construction, Paints, IAP, and Polymers"
-                        optionB="Construction, Paint, Polymers, and Agriculture"
-                        optionC="Oilfield, Cosmetics, Textile, and Paint"
-                        optionD="Cosmetics, Paints, Textile and Polymers"
-                        question_number="2"
-                        is_admin="true"
-                        answer="A"
-    ></app-question-card>
 
-
-</div>
-
-
-<div class="questions">
-    <app-question-card
-    question="Acetone is mainly used in which of the industries" 
-                        optionA="Construction, Paints, IAP, and Polymers"
-                        optionB="Construction, Paint, Polymers, and Agriculture"
-                        optionC="Oilfield, Cosmetics, Textile, and Paint"
-                        optionD="Cosmetics, Paints, Textile and Polymers"
-                        question_number="3"
-                        is_admin="true"
-                        answer="A"
-    ></app-question-card>
-
-
-</div>
-
-
-<div class="questions">
-    <app-question-card
-    question="Acetone is mainly used in which of the industries" 
-                        optionA="Construction, Paints, IAP, and Polymers"
-                        optionB="Construction, Paint, Polymers, and Agriculture"
-                        optionC="Oilfield, Cosmetics, Textile, and Paint"
-                        optionD="Cosmetics, Paints, Textile and Polymers"
-                        question_number="4"
-                        is_admin="true"
-                        answer="A"
-    ></app-question-card>
-
-
-</div>

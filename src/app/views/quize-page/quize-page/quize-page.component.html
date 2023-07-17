@@ -16,7 +16,7 @@
                         </button>
                       </div>
                     <div fxFlex="100%" fxLayout="column">
-                        <span class="time">00:00 &nbsp; Min</span>
+                        <span class="time">{{min}}:{{sec}} &nbsp; Min</span>
                         <span class="time-detail"  fxLayout="end">Time Left</span>
                     </div>
                 </div>
@@ -24,30 +24,66 @@
             </div>
         </div>
 
-
-        <div class="question-card">
+        <div class="question-card" *ngIf="response.test_status=='pending' && start">
             <div class="quize-area" fxLayout="column" fxFlex="100%">
 
-                <div class="quize" fxLayout="column" fxFlex="70%" fxLayoutAlign="center" *ngIf="quizQuestions && quizQuestions.length > 0">
+                <div class="quize" fxLayout="column" fxFlex="70%" fxLayoutAlign="center">
                
-                    <app-question-card></app-question-card>
+                    <app-question-card ></app-question-card>
                     
                 </div>
             </div>
     
-        </div>        
+        </div> 
+        
+        <div class="quize-area score" *ngIf="response.test_status=='finished'">
+            <div class="quize-area" fxLayout="column" fxFlex="100%">
 
-        <!-- <div class="quize-area score" fxLayout="column" fxFlex="100%">
+                <div class="quize" fxLayout="column" fxFlex="70%" fxLayoutAlign="center">
+               
+                    <app-score-card name={{response.name}} email={{response.email}} score={{response.quiz_score}}></app-score-card>
+                    
+                </div>
+            </div>
+    
+        </div> 
+
+
+        <div class="quize-area score" fxLayout="column" fxFlex="60%" *ngIf="!start && response.test_status=='pending'">
 
             <div class="quize" fxLayout="column" fxFlex="70%" fxLayoutAlign="center">
-
-                <app-score-card name="Somebody Anybody" email="anybody@email.com" score="73"></app-score-card>
+        
+                <mat-card>
+                    <mat-card-header fxLayout="column">
+                      <mat-card-title>Click on start button to begin</mat-card-title>
+                      <br>
+                      <p class="instruction">You have 30 mins to answer the questions</p>
+                      <p>You cant go back after clicking next make sure you are sure befor clicking on next</p>
+                    </mat-card-header>
+                
+                    <mat-card-content >
+                        <span class="score-title" fxLayout="column" fxLayoutAlign="center center">
+                           
+                            <button mat-raised-button color="primary" (click)="countdown(5)">Start</button>
+                        </span>
+                        
+                        
+                    </mat-card-content>
+                
+                
+                   
+                  </mat-card>
+        
                 
             </div>
-        </div> -->
+        </div>
 
+
+
+        
+        
 
     </div>
 
-    <!-- <app-admin-header></app-admin-header> -->
+    
 </div>

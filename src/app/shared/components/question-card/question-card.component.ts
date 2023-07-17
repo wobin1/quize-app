@@ -2,6 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { QuizeService } from '../../services/quize-service/quize.service';
 import { LocalStorageService } from '../../services/local-storage-service/local-storage.service';
 import { ServerRequestService } from '../../services/server-request-service/server-request.service';
+import { RoutingService } from '../../services/routing-service/routing.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question-card',
@@ -89,7 +91,7 @@ export class QuestionCardComponent {
               }
             ]
 
-  constructor(private quizService: QuizeService, public store: LocalStorageService, private api: ServerRequestService){}
+  constructor(private quizService: QuizeService, public store: LocalStorageService, private api: ServerRequestService, public router: Router){}
 
   ngOnInit(){
     this.getUserData()
@@ -117,8 +119,9 @@ export class QuestionCardComponent {
       console.log("score updated")
     }
 
-    console.log(this.score)
+    console.log('current question index')
     this.currentQuestionIndex++;
+    console.log(this.currentQuestionIndex)
 
     this.currentQuestion()
 
@@ -126,7 +129,7 @@ export class QuestionCardComponent {
     console.log(this.quizQuestions.length)
 
     if (this.currentQuestionIndex == this.quizQuestions.length - 1) {
-      alert("completed")
+      this.router.navigateByUrl('submit')
     }
   }
 
@@ -152,12 +155,14 @@ export class QuestionCardComponent {
     this.response.quiz_score = this.score
     this.api.put('quizes/' + userId + '/', this.response).subscribe(
       res=>{
-        console.log
+        console.log(res)
       },
       err=>{
         console.log(err)
       }
     )
   }
+
+  
   
 }

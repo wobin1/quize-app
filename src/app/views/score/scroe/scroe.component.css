@@ -3,6 +3,29 @@
     margin: 0 auto;
     width: min(98%, 98rem);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.3rem;
 }
+
+
+@media(min-width: 450px){
+    .section {
+        margin: 0 auto;
+        width: min(98%, 98rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.3rem;
+    }
+}
+
+@media(min-width: 850px){
+    .section {
+        margin: 0 auto;
+        width: min(98%, 98rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.3rem;
+    }
+}
+
+
