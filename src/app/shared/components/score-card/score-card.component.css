@@ -1,0 +1,24 @@
+.score {
+    margin-bottom: 3rem;
+}
+
+.score-title {
+    color: #134E6F;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-right: 1rem;
+}
+
+.score-percentage {
+    color: #131414;
+    text-align: start;
+    font-family: var(--font-family);
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

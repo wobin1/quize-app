@@ -1,0 +1,60 @@
+.section-layer {
+    height: 100vh;
+}
+
+.section {
+    margin-top: 5%;
+}
+
+.header {
+    /* margin-bottom: 1rem; */
+}
+
+.test-title {
+    color: #134E6F;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-right: 1rem;
+}
+
+.time {
+    color: #134E6F;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.time-detail {
+    color: #b3b5b6;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.test-timing {
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding-right: 1rem;
+}
+
+
+.quize-area {
+    margin-top: 5%;
+}
+
+.quize {
+    padding-top: 4%;
+}
+
+

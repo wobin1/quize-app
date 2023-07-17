@@ -1,0 +1,15 @@
+.section-layout {
+    height: 100vh;
+}
+
+.section {
+    height: 100%;
+}
+
+.card {
+    max-width: 400px;
+}
+
+.example-container {
+  margin-top: 1rem;
+}

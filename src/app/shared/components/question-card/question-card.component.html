@@ -1,0 +1,71 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Question {{question_number}}</mat-card-title>
+      
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="question" fxLayout="row" fxLayoutAlign="space-between">
+            {{question}}
+            <span class="answer" *ngIf="is_admin=='true'">Answer {{answer}}</span>
+        </div>
+
+        <div class="options">
+            <div class="option" id="selected" (click)="onClick(optionA)" *ngIf="selected==optionA"> 
+                <div>
+                    <span>A</span> &nbsp; {{optionA}}
+                </div>
+                
+            </div>
+            <div class="option" (click)="onClick(optionA)" *ngIf="selected!=optionA"> 
+                <div>
+                    <span>A</span> &nbsp; {{optionA}}
+                </div>
+                
+            </div>
+            <div class="option" id="selected" (click)="onClick(optionB)" *ngIf="selected==optionB"> 
+                <div><span>B</span> &nbsp; {{optionB}}</div>
+               
+            </div>
+            <div class="option" (click)="onClick(optionB)" *ngIf="selected!=optionB"> 
+                <div><span>B</span> &nbsp; {{optionB}}</div>
+               
+            </div>
+            <div class="option" id="selected" (click)="onClick(optionC)" *ngIf="selected==optionC"> 
+                <div>
+                    <span>C</span> &nbsp; {{optionC}}
+                </div>
+                
+            </div>
+            <div class="option" (click)="onClick(optionC)" *ngIf="selected!=optionC"> 
+                <div>
+                    <span>C</span> &nbsp; {{optionC}}
+                </div>
+                
+            </div>
+            <div class="option" id="selected" (click)="onClick(optionD)" *ngIf="selected==optionD"> 
+               <div>
+                <span>D</span> &nbsp; {{optionD}}
+                </div>               
+
+            </div>
+            <div class="option" (click)="onClick(optionD)" *ngIf="selected!=optionD"> 
+                <div>
+                 <span>D</span> &nbsp; {{optionD}}
+                 </div>               
+ 
+             </div>
+               
+        </div>
+    </mat-card-content>
+
+
+    <mat-card-actions align="end">
+      <!-- <button mat-raised-button color="primary">Previous</button> -->
+      <button mat-raised-button color="primary" (click)="answerSelected()">Next Question</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+  

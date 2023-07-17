@@ -1,0 +1,8 @@
+
+.section {
+    margin: 0 auto;
+    width: min(98%, 98rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.3rem;
+}

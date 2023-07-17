@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{name}}</mat-card-title>
+      <mat-card-subtitle>{{email}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <span class="score-title" fxLayout="row" fxLayoutAlign="center center">Score</span>
+        <div class="score-percentage" fxLayout="row" fxLayoutAlign="center center">
+            {{score}}
+        </div>
+        
+    </mat-card-content>
+
+
+    <!-- <mat-card-actions align="end">
+      <button mat-raised-button color="primary">Previous</button>
+      <button mat-raised-button color="primary">Next</button>
+    </mat-card-actions> -->
+  </mat-card>
+
+
+          <div class="quize-area score" fxLayout="column" fxFlex="100%">
+
+            <div class="quize" fxLayout="column" fxFlex="70%" fxLayoutAlign="center">
+
+                <mat-card>
+                    <mat-card-header>
+                      <mat-card-title>Click on the finish button below to submit</mat-card-title>
+                      <mat-card-subtitle>Nagode Sales Test</mat-card-subtitle>
+                    </mat-card-header>
+                
+                    <mat-card-content>
+                        <span class="score-title" fxLayout="column" fxLayoutAlign="center center">
+                           
+                            <button mat-raised-button color="primary">Finish</button>
+                        </span>
+                        
+                        
+                    </mat-card-content>
+                
+                
+                   
+                  </mat-card>
+                
+            </div>
+        </div>
