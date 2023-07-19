@@ -17,14 +17,21 @@ export class QuizePageComponent {
   start:boolean=false;
   min:any;
   sec:any;
+  questionLength:any;
+  time:any = 25;
 
 
 
-  constructor(private api: ServerRequestService, public store: LocalStorageService, public router: Router){}
+  constructor(private api: ServerRequestService, 
+            public store: LocalStorageService, 
+            public router: Router,
+            public questions: QuizeService){}
 
   ngOnInit(){
     this.getUserData()
     this.status
+    
+    
   }
 
   getUserData(){

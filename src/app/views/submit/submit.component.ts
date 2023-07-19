@@ -44,7 +44,7 @@ export class SubmitComponent {
     this.api.put('quizes/' + userId + '/', this.response).subscribe(
       res=>{
         console.log(res)
-        this.router.navigateByUrl('quize')
+        this.router.navigateByUrl('quiz')
       },
       err=>{
         console.log(err)

@@ -4,7 +4,7 @@ import { QuizeComponent } from 'src/app/shared/layout/quize/quize.component';
 import { QuizePageComponent } from './quize-page/quize-page.component';
 
 const routes: Routes = [
-{path:'quize', component: QuizePageComponent}
+{path:'quiz', component: QuizePageComponent}
 ];
 
 @NgModule({

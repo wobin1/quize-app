@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ServerRequestService {
 
-baseUrl = "http://127.0.0.1:8000/"
+// baseUrl = "http://127.0.0.1:8000/"
+baseUrl = "https://nathanielwobin.pythonanywhere.com/"
 
 
 

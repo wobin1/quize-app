@@ -31,7 +31,7 @@ export class LoginComponent {
     checkUser(){
       let userId = this.store.getStoredData("nagodeTestUserId")
     if(userId!=null){
-      window.location.href = '/quize';
+      // window.location.href = '/quize';
       console.log('user already on this pc')
     }
 
@@ -44,17 +44,24 @@ export class LoginComponent {
     
     console.log(this.loginData)
 
-    this.api.post('quizes/', this.loginData).subscribe(
+    this.api.post('quizes/register/', this.loginData).subscribe(
       res=>{
         console.log(res)
         this.response = res;
         this.storeUserData(this.response.id)
-        this.router.navigateByUrl('quize')
+        if(this.response.user_role=='user'){
+          this.router.navigateByUrl('quiz')
+        }
+        if(this.response.user_role=='admin'){
+          this.router.navigateByUrl('admin')
+        }
+        
       },
       err=>{
         console.log(err)
-        alert("there was a problem with your request")
-        this.progress=false;
+        // console.log("This Email has already taken the Test Click ok to see your result")
+        // this.router.navigateByUrl('quize')
+        // this.progress=false;
       }
     )
 
